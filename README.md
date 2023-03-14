@@ -3,7 +3,7 @@
 This is based on the [public MSK immersion day workshop](https://catalog.us-east-1.prod.workshops.aws/workshops/c2b72b6f-666b-4596-b8bc-bafa5dcca741/en-US/overview)
 
 # Content
-1. MSK Workshop introduction and preparation (15 mins)
+1. [MSK Workshop introduction and preparation](pre-introduction.md) (15 mins)
 2. MSK operations labs (60 mins)  
     1. MSK cluster creation lab [[link]](https://catalog.us-east-1.prod.workshops.aws/workshops/c2b72b6f-666b-4596-b8bc-bafa5dcca741/en-US/clustercreation/overview) (15 mins)
     2. MSK cluster expansion [[link]](https://catalog.us-east-1.prod.workshops.aws/workshops/c2b72b6f-666b-4596-b8bc-bafa5dcca741/en-US/addingbrokers/overview)+ storage expansion labs [[link]](https://catalog.us-east-1.prod.workshops.aws/workshops/c2b72b6f-666b-4596-b8bc-bafa5dcca741/en-US/addingdisk/overview) (15 mins)  

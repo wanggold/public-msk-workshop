@@ -79,6 +79,51 @@ aws configure
 ```
 ![AWS-Config](./pics/Screen%20Shot%202023-03-16%20at%209.57.17%20AM.png)
 
+## Setup Variables on Kafka Client
+
+1. Go to MSK console. Click **View client information**
+
+![ClientInfo](./pics/Screen%20Shot%202023-03-16%20at%2012.37.12%20PM.png)
+
+2. Copy **Plaintext** MSK endpoint string
+
+![PlainTextEndpoint](./pics/Screen%20Shot%202023-03-16%20at%2012.39.12%20PM.png)
+
+3. SSH to Kafka client EC2 [link](#connect-to-kafkaclientinstance). 
+
+4. Run the following command by replacing *<PLAINTEXT_MSK_ENDPOINT_STRING>* with copied MSK endpoint string. ***PLEASE DO NOT CLOSE THE TERMINAL"***. 
+
+```
+export MYBROKERS="<PLAINTEXT_MSK_ENDPOINT_STRING>"
+```
+
+5. Copy **Plaintext** for Apache ZooKeeper connection
+
+![PlainTextZookeeper](./pics/Screen%20Shot%202023-03-16%20at%203.02.29%20PM.png)
+
+6. Run the following command by replacing *<PLAINTEXT_MSK_ZOOKEEPER_STRING>* with copied MSK endpoint string. ***PLEASE DO NOT CLOSE THE TERMINAL"***. 
+
+```
+export MYZK="<PLAINTEXT_MSK_ZOOKEEPER_STRING>"
+```
+
+7. Go to MSK console. Copy **ARN** of MSK cluster
+
+![MSK-ARN](./pics/Screen%20Shot%202023-03-16%20at%2012.50.27%20PM.png)
+
+8. In terminal of **Cloud9 Basion EC2**, run the following command by replacing *<CLUSTER_ARN_STRING>* with copied MSK cluster ARN. 
+
+```
+export CLUSTER_ARN="<CLUSTER_ARN_STRING>"
+```
+
+9. Install `jq` command on Cloud9 instance by running 
+
+```
+sudo yum install epel-release
+sudo yum install jq
+```
+
 ## Setup Clickstream Lab 
 
 1. [Create Service Linked Role for Amazon OpenSearch](https://catalog.us-east-1.prod.workshops.aws/workshops/c2b72b6f-666b-4596-b8bc-bafa5dcca741/en-US/mskkdaflinklab/setup#create-a-service-linked-role-for-amazon-elasticsearch) (previously amazon Elasticsearch) 

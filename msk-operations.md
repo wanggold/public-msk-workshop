@@ -27,12 +27,14 @@
     1. Go to Cloud9 EC2 instance terminal
 
     2. Get configuration hash for the cluster
+
     ```
     export CLUSTER_VERSION=$(aws kafka describe-cluster --cluster-arn $CLUSTER_ARN --output json | jq ".ClusterInfo.CurrentVersion" | tr -d \")
 
     ```
 
     3. List MSK cluster operatioins
+
     ```
     aws kafka list-cluster-operations --cluster-arn $CLUSTER_ARN
     ```
@@ -42,19 +44,23 @@
 5. Re-assign partitions after changing cluster size [Link to MSK workshop](https://catalog.us-east-1.prod.workshops.aws/workshops/c2b72b6f-666b-4596-b8bc-bafa5dcca741/en-US/addingbrokers/reassignpartitions) (10 mins)
 
     * Correction on **Build a new partition configuration**  
+
     ```
     bin/kafka-reassign-partitions.sh --bootstrap-server $MYBROKERS --topics-to-move-json-file topics-to-move.json --broker-list "1,2,3,4,5,6" --generate --zookeeper $MYZK
     ```
+
     * Copy `Current partition replica assignment` to `original-state.json`.
 
     * Copy `Proposed partition reassignment configuration` to `expand-cluster-reassignment.json`
 
     * Correction on **Execute the change**
+
     ```
     bin/kafka-reassign-partitions.sh --bootstrap-server $MYBROKERS --reassignment-json-file expand-cluster-reassignment.json  --zookeeper $MYZK --execute
     ```
 
     * Correction on **Monitor the progress**
+
     ```
     bin/kafka-reassign-partitions.sh --bootstrap-server $MYBROKERS --reassignment-json-file expand-cluster-reassignment.json --zookeeper $MYZK --verify
 
@@ -65,3 +71,5 @@
 1. Overview of storage addition process [Link to MSK workshop](https://catalog.us-east-1.prod.workshops.aws/workshops/c2b72b6f-666b-4596-b8bc-bafa5dcca741/en-US/addingdisk/overview) (5 mins)  
 
 2. Expand storage using the AWS Console [Link to MSK workshop](https://catalog.us-east-1.prod.workshops.aws/workshops/c2b72b6f-666b-4596-b8bc-bafa5dcca741/en-US/addingdisk/console) (5 mins)  
+
+[BACK TO MAIN](/README.md)

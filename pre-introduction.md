@@ -11,7 +11,7 @@
 
 ## Login to Event AWS account
 
-1. Go to <a href="https://dashboard.eventengine.run/login" target="_blank" rel="noopener">Event Login Page</a>. Enter **EVNET HASH: daa4-1a4e08c664-c2** and click **Accept Terms & Login**
+1. Go to <a href="https://dashboard.eventengine.run/login" target="_blank" rel="noopener">Event Login Page</a>. Enter EVNET HASH: **daa4-1a4e08c664-c2**, and click **Accept Terms & Login**
 
 ![LoginEvent](./pics/Screen%20Shot%202023-03-16%20at%2010.21.22%20AM.png)
 
@@ -26,9 +26,9 @@
 
 1. Navigate to the Event Engine page - https://dashboard.eventengine.run. Download the keypair for SSH connect to Kafka client EC2 instance
 
-| | |
-| - | - |
-|![SSH-KeyPair](/pics/Screen%20Shot%202023-03-16%20at%209.23.05%20AM.png) | ![DownLoad](./pics/Screen%20Shot%202023-03-16%20at%2010.31.16%20AM.png)|
+![SSH-KeyPair](/pics/Screen%20Shot%202023-03-16%20at%209.23.05%20AM.png)
+
+![DownLoad](./pics/Screen%20Shot%202023-03-16%20at%2010.31.16%20AM.png)
 
 
 2. Open environment in Cloud9

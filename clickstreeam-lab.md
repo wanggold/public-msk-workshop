@@ -53,11 +53,13 @@ ssh -i ee-default-keypair-2.pem ec2-user@<KAFKA_CLIENT_PUBLIC_IP>
 ![zooConn](./pics/Screen%20Shot%202023-03-16%20at%206.52.38%20PM.png)
 
 2. On Kafka client EC2 terminal, create variable 
+
 ```
 export MYZK=<ZOOKEEPR_CONNECTION_STRING>
 ```
 
 3. Create the ExampleTopic topic in the MSK Kafka cluster.
+
 ```
 /home/ec2-user/kafka/bin/kafka-topics.sh --create --zookeeper $MYZK --replication-factor 3 --partitions 3 --topic ExampleTopic
 ```
@@ -151,7 +153,7 @@ Follow [link to workshop](https://catalog.us-east-1.prod.workshops.aws/workshops
 
 ![mac](./pics/Screen%20Shot%202023-03-16%20at%207.38.38%20PM.png)
 
-
+[BACK TO MAIN](/README.md)
 
 
 

@@ -79,6 +79,9 @@ aws configure
 ```
 ![AWS-Config](./pics/Screen%20Shot%202023-03-16%20at%209.57.17%20AM.png)
 
+4. Test connectivity by running `aws kafka list-clusters` and you should see a list of clusters in your account
+
+
 ## Setup Variables on Kafka Client
 
 1. Go to MSK console. Click **View client information**

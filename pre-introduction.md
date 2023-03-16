@@ -1,17 +1,16 @@
-# MSK Workshop introduction and preparation
+# MSK Workshop Preparation
 [BACK TO MAIN](/README.md)
-## Loging AWS account 
-## Preparation
 
-Content:
+## Content
+
 * [Login to Event AWS account](#login-to-event-aws-account)
 * [Connect to KafkaClientInstance](#connect-to-kafkaclientinstance)
 * [Setup AWS CLI on KafkaClientInstance](#setup-aws-cli-on-kafkaclientinstance)
 * [Setup Clickstream Lab](#setup-clickstream-lab)
 
-### Login to Event AWS account
+## Login to Event AWS account
 
-1. Go to [Event Login Page](https://dashboard.eventengine.run/login). Enter **EVNET HASH** and click **Accept Terms & Login**
+1. Go to <a href="https://dashboard.eventengine.run/login" target="_blank">Event Login Page</a>. Enter **EVNET HASH** and click **Accept Terms & Login**
 
 ![LoginEvent](./pics/Screen%20Shot%202023-03-16%20at%2010.21.22%20AM.png)
 
@@ -22,7 +21,7 @@ Content:
 |![OpenDashboard](./pics/Screen%20Shot%202023-03-16%20at%2010.48.30%20AM.png) | ![LoginConsole](./pics/Screen%20Shot%202023-03-16%20at%2010.49.31%20AM.png) |
 
 
-### Connect to KafkaClientInstance
+## Connect to KafkaClientInstance
 
 1. Navigate to the Event Engine page - https://dashboard.eventengine.run. Download the keypair for SSH connect to Kafka client EC2 instance
 
@@ -62,13 +61,13 @@ ssh -i ee-default-keypair.pem ec2-user@<INSTANCE-IP>
 ![SshToClient](./pics/Screen%20Shot%202023-03-16%20at%209.44.18%20AM.png)
 
 
-### Setup AWS CLI on KafkaClientInstance
+## Setup AWS CLI on KafkaClientInstance
 
-1. Navigate to the Event Engine page - https://dashboard.eventengine.run. Click on `AWS Console`
+1. Navigate to the Event Engine page - https://dashboard.eventengine.run. Click on **AWS Console**
 
 ![EventAWSConsole](./pics/Screen%20Shot%202023-03-16%20at%209.51.35%20AM.png)
 
-2. Get the `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY` from either the Mac/Linux or Windows section.
+2. Get the **AWS_ACCESS_KEY_ID** and **AWS_SECRET_ACCESS_KEY** from either the Mac/Linux or Windows section.
 
 ![AccessKey](./pics/Screen%20Shot%202023-03-16%20at%209.53.47%20AM.png)
 
@@ -80,7 +79,7 @@ aws configure
 ```
 ![AWS-Config](./pics/Screen%20Shot%202023-03-16%20at%209.57.17%20AM.png)
 
-### Setup Clickstream Lab 
+## Setup Clickstream Lab 
 
 1. [Create Service Linked Role for Amazon OpenSearch](https://catalog.us-east-1.prod.workshops.aws/workshops/c2b72b6f-666b-4596-b8bc-bafa5dcca741/en-US/mskkdaflinklab/setup#create-a-service-linked-role-for-amazon-elasticsearch) (previously amazon Elasticsearch) 
 
